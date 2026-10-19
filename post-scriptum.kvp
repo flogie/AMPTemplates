@@ -16,7 +16,7 @@ Meta.DockerRequired=False
 Meta.ContainerPolicy=Supported
 Meta.ConfigReleaseState=NotSpecified
 Meta.NoCommercialUsage=False
-Meta.ConfigVersion=4
+Meta.ConfigVersion=5
 Meta.AppConfigId=519da47a-1c63-4fca-bdb6-1caa1c1e05be
 Meta.AppIsMultiIPAware=True
 App.DisplayName=Squad 44
@@ -81,7 +81,7 @@ Console.UserJoinRegex=LogNet: Login request: \?Name=(?<username>.+?)(?:\?\S*)? u
 Console.UserLeaveRegex=LogNet: UNetConnection::Close: .*Driver: GameNetDriver .*UniqueId: Steam:.*?\[(?<userid>0x[0-9A-Fa-f]+)\]
 Console.UserChatRegex=^\[Chat.*\] \[SteamID\:(?<userid>-?\d+)\] (?<username>.+?) \: (?<message>.+)$
 Console.UpdateAvailableRegex=
-Console.MetricsRegex=
+Console.MetricsRegex=^\[[\d.:-]+\]\[[\d ]+\]LogSquad: USQGameState: Server Tick Rate: (?<TPS>[\d.]+) with \d+ players$
 Console.SuppressLogAtStart=False
 Console.ActivateLogRegex=
 Console.UserActions={}
