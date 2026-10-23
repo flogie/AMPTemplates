@@ -334,5 +334,39 @@
             "False": "false",
             "True": "true"
         }
+    },
+    {
+        "DisplayName": "Steam Client Library",
+        "Category": "Squad 44:stadia_controller",
+        "Subcategory": "Steam:cloud:2",
+        "Description": "Which steamclient.so the server loads (via LD_LIBRARY_PATH). 'Game bundled' uses the version shipped with the game and is the default. 'SteamCMD' uses the newer version installed by SteamCMD; it may need 'Ignore WebSocket Certificate Issues' to log in to Steam in time. Restart the server after changing.",
+        "Keywords": "steam,steamclient,steamcmd,library,ld_library_path,login",
+        "FieldName": "SteamClientLibDir",
+        "InputType": "enum",
+        "IsFlagArgument": false,
+        "ParamFieldName": "SteamClientLibDir",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "746200/linux64",
+        "EnumValues": {
+            "746200/linux64": "Game bundled (default)",
+            "linux64": "SteamCMD"
+        }
+    },
+    {
+        "DisplayName": "Ignore WebSocket Certificate Issues",
+        "Category": "Squad 44:stadia_controller",
+        "Subcategory": "Steam:cloud:2",
+        "Description": "Adds -websocketignorecertissues to the command line. Workaround for newer SteamCMD steamclient.so builds whose WebSocket connection to Steam fails, so the server logs in too late and does not appear in the server browser. Disables certificate checking of the Steam connection - only enable if needed. Restart the server after changing.",
+        "Keywords": "steam,websocket,certificate,login,server browser",
+        "FieldName": "WebSocketIgnoreCertIssues",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "WebSocketIgnoreCertIssues",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": " -websocketignorecertissues"
+        }
     }
 ]

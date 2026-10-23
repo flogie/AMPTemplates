@@ -16,7 +16,7 @@ Meta.DockerRequired=False
 Meta.ContainerPolicy=Supported
 Meta.ConfigReleaseState=NotSpecified
 Meta.NoCommercialUsage=False
-Meta.ConfigVersion=6
+Meta.ConfigVersion=7
 Meta.AppConfigId=519da47a-1c63-4fca-bdb6-1caa1c1e05be
 Meta.AppIsMultiIPAware=True
 App.DisplayName=Squad 44
@@ -28,10 +28,10 @@ App.SteamWorkshopDownloadLocation={{$FullBaseDir}}PostScriptum/Plugins/Mods
 App.ExecutableWin=746200\PostScriptum\Binaries\Win64\PostScriptumServer.exe
 App.ExecutableLinux=746200/PostScriptum/Binaries/Linux/PostScriptumServer
 App.WorkingDir=746200
-App.CommandLineArgs=MULTIHOME={{$ApplicationIPBinding}} Port={{$GamePort}} QueryPort={{$QueryPort}} RCONPORT={{$RCONPort}} RCONPASSWORD={{$RemoteAdminPassword}} FIXEDMAXTICKRATE={{MaxTPS}} RANDOM={{MapRandom}} -log -fullcrashdump -websocketignorecertissues
+App.CommandLineArgs=MULTIHOME={{$ApplicationIPBinding}} Port={{$GamePort}} QueryPort={{$QueryPort}} RCONPORT={{$RCONPort}} RCONPASSWORD={{$RemoteAdminPassword}} FIXEDMAXTICKRATE={{MaxTPS}} RANDOM={{MapRandom}} -log -fullcrashdump{{WebSocketIgnoreCertIssues}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"736220"}
+App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullRootDir}}{{SteamClientLibDir}}:%LD_LIBRARY_PATH%","SteamAppId":"736220"}
 App.CommandLineParameterFormat={0}="{1}"
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
